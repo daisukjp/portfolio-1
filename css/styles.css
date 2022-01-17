@@ -24,6 +24,11 @@ body {
   text-decoration: none;
   color: black;
   font-size: 20px;
+  cursor: pointer;
+}
+
+.main-nav a:hover {
+  border-bottom: 1px solid black;
 }
 
 .main-nav ul {
@@ -87,8 +92,9 @@ body {
 }
 
 .sns {
-  margin-top: 140px;
-  margin-left: 400px;
+  position: fixed;
+  right: 70px;
+  top: 370px;
 }
 
 .sns .social-nav li {
@@ -110,8 +116,35 @@ body {
   transition: all 0.2s ease 0.1s;
 }
 
-.resume a:hover {
+.resume a.slide-bg {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.resume a.slide-bg span {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
   background-color: black;
+  position: absolute;
+  top: 0%;
+  left: 0;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: -webkit-transform 0.2s ease 0.1s;
+  transition: -webkit-transform 0.2s ease 0.1s;
+  transition: transform 0.2s ease 0.1s;
+  transition: transform 0.2s ease 0.1s, -webkit-transform 0.2s ease 0.1s;
+  z-index: -1;
+}
+
+.resume a.slide-bg:hover {
   color: white;
+}
+
+.resume a.slide-bg:hover span {
+  -webkit-transform: none;
+          transform: none;
 }
 /*# sourceMappingURL=styles.css.map */
