@@ -122,7 +122,8 @@ body {
   z-index: 1;
 }
 
-.resume a.slide-bg span {
+.resume a.slide-bg::before {
+  content: "";
   display: inline-block;
   width: 100%;
   height: 100%;
@@ -143,7 +144,7 @@ body {
   color: white;
 }
 
-.resume a.slide-bg:hover span {
+.resume a.slide-bg:hover::before {
   -webkit-transform: none;
           transform: none;
 }
